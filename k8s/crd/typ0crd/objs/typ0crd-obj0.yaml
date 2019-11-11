@@ -1,0 +1,12 @@
+apiVersion: "crd.devcluster.com/v1"
+kind: Typ0crd
+metadata:
+  name: typ0crd-obj0
+spec:
+  typ0crdSpec: "* * * * */5"
+  
+#  Name: "typ0crd-obj0"
+#    Name: typ0crd-obj0
+#  url: 
+
+# /apis/crd.devcluster.network.com/v1/namespaces/default/typ0crds/typ0crd-obj0

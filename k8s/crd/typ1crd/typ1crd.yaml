@@ -1,0 +1,38 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: typ1crds.crd.devcluster.network.com
+spec:
+  group: crd.devcluster.network.com
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                typ1crdSpec:
+                  type: string
+                image:
+                  type: string
+                replicas:
+                  type: integer
+
+  scope: Namespaced
+  names:
+    # plural name to be used in the url
+    # /apis/crd.devcluster.network.com/v1/typ1crds
+    plural: typ1crds
+    shortNames: 
+    - t1
+    singular: typ1crd
+    kind: Typ1crd
+
+#  preserveUnknownFields: false
+
+
+              
